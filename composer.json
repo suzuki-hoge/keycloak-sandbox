@@ -1,0 +1,14 @@
+{
+  "name": "suzuki-hoge/keycloak-sandbox",
+  "description": "keycloak sandbox",
+  "require": {
+    "guzzlehttp/guzzle": "^6",
+    "firebase/php-jwt": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sandbox\\": "src/"
+    }
+  }
+}
+

@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  app:
+    build: docker/lang
+    ports: [ 19001:9001 ]
+    volumes: [ .:/sync ]
+    command: php -S 0.0.0.0:9001 -t /sync/src
+    
+  keycloak:
+    image: jboss/keycloak
+    ports: [ 19002:8080 ]
+    environment:
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+
